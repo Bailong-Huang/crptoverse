@@ -14,15 +14,16 @@ const { Option } = Select;
 
 
 const CryptoDetails = () => {
-  const { coinId } = useParams();
+  const { uuid } = useParams();
   const [timePeriod, setTimePeriod] = useState('7d')
-  const {data, isFetching} = useGetCryptoDetailsQuery(coinId)
+  const {data, isFetching} = useGetCryptoDetailsQuery(uuid)
 
-  console.log(coinId);
+  console.log(uuid);
 
   return (
     <div>
-      CryptoDetails {coinId}
+      CryptoDetails {uuid}
+      
     </div>
   )
 }
